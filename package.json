@@ -1,0 +1,12 @@
+{
+  "name": "thedroplog",
+  "version": "1.0.0",
+  "description": "The Drop Log - Auto-build website from Google Sheets",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6"
+  }
+}
