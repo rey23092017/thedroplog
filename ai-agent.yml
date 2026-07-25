@@ -2,8 +2,8 @@ name: Autonomous AI Agent (Gadget Hunter)
 
 on:
   schedule:
-    # Run at 10:00 AM UTC (3:30 PM IST) every Friday
-    - cron: '0 10 * * 5'
+    # Run at 10:00 AM UTC (3:30 PM IST) every day
+    - cron: '0 10 * * *'
   workflow_dispatch:
 
 permissions:
