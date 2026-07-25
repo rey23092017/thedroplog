@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Drop Log — Latest Gadget Arrivals, India · July 2026</title>
+<meta name="description" content="Six gadgets that landed in India this July 2026 — specs, prices, and buying links." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEEAE0;
+    --paper-card:#FBF9F4;
+    --ink:#17202B;
+    --ink-soft:#5B6472;
+    --rule:#C9C2B2;
+    --amber:#8A5A10;
+    --teal:#14615A;
+    --teal-deep:#0E4A45;
+    --font-display:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono:'JetBrains Mono', ui-monospace, 'SF Mono', 'Courier New', monospace;
+    --font-body:'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#DCD6C6;
+    color:var(--ink);
+    font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+
+  .sheet{
+    max-width:860px;
+    margin:2.5rem auto;
+    background:var(--paper);
+    padding:2.25rem 1.5rem 3rem;
+    box-shadow:0 1px 2px rgba(23,32,43,.08), 0 12px 32px rgba(23,32,43,.12);
+    border-radius:2px;
+  }
+  @media(min-width:720px){ .sheet{padding:3rem 3.25rem 3.5rem;} }
+  @media(max-width:480px){ .sheet{margin:0.75rem auto; padding:1.5rem 1.1rem 2rem;} }
+
+  /* Masthead */
+  .masthead{padding-bottom:1.5rem; border-bottom:3px double var(--ink); margin-bottom:1.75rem;}
+  .masthead-top{display:flex; justify-content:space-between; gap:1rem; font-family:var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  .wordmark{font-family:var(--font-display); font-weight:700; text-transform:uppercase; font-size:clamp(2.1rem,7vw,3rem); letter-spacing:-.02em; margin:.35rem 0 .5rem;}
+  .tagline{font-size:1.02rem; color:var(--ink); max-width:46ch; margin:0 0 1rem; line-height:1.5;}
+  .meta-bar{display:flex; flex-wrap:wrap; gap:.4rem 1.25rem; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft);}
+  .meta-bar strong{color:var(--ink); font-weight:700;}
+
+  /* Intro */
+  .intro{font-size:.98rem; line-height:1.65; color:var(--ink); max-width:64ch; margin-bottom:2rem;}
+  .intro strong{font-weight:600;}
+
+  /* Index */
+  .index{margin-bottom:2.25rem;}
+  .index h2{font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft); margin:0 0 .75rem;}
+  .index ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.55rem;}
+  .index a{display:flex; align-items:baseline; gap:.6rem; text-decoration:none; font-family:var(--font-mono); font-size:.85rem;}
+  .idx-num{color:var(--ink-soft);}
+  .idx-name{flex-shrink:0;}
+  .idx-leader{flex:1; border-bottom:1px dotted var(--rule); transform:translateY(-4px); min-width:1rem;}
+  .idx-price{font-weight:700; flex-shrink:0;}
+  .index a:hover .idx-name{color:var(--teal);}
+
+  /* Entries */
+  .entries{margin-bottom:1rem;}
+  .entry{
+    background:var(--paper-card);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:1.5rem;
+    margin-bottom:1.25rem;
+    scroll-margin-top:1rem;
+  }
+  @media(min-width:720px){ .entry{padding:2rem 2.1rem;} }
+  @media (prefers-reduced-motion: no-preference){
+    .entry{animation:rise .5s ease both;}
+    .entry:nth-child(1){animation-delay:.02s}
+    .entry:nth-child(2){animation-delay:.06s}
+    .entry:nth-child(3){animation-delay:.10s}
+    .entry:nth-child(4){animation-delay:.14s}
+    .entry:nth-child(5){animation-delay:.18s}
+    .entry:nth-child(6){animation-delay:.22s}
+    @keyframes rise{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+  }
+
+  .entry-head{display:flex; flex-wrap:wrap; align-items:center; gap:.6rem 1rem; margin-bottom:.6rem;}
+  .stamp{
+    display:inline-block; padding:.2rem .55rem; border:1.5px solid currentColor; border-radius:2px;
+    font-family:var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700;
+    transform:rotate(-3deg);
+  }
+  .stamp--sale{color:var(--teal);}
+  .stamp--tba{color:var(--amber);}
+  .stamp--preorder{color:var(--amber);}
+  .entry-date{font-family:var(--font-mono); font-size:.7rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft);}
+  .entry-cat{display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft);}
+  .cat-icon{width:16px; height:16px; flex-shrink:0;}
+
+  .entry-name{font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-.01em; margin:0 0 .75rem;}
+  .entry-blurb{font-size:.95rem; line-height:1.6; color:var(--ink); margin:0 0 1.35rem; max-width:62ch;}
+
+  .entry-body{display:grid; gap:1.25rem; grid-template-columns:1fr;}
+  @media(min-width:720px){ .entry-body{grid-template-columns:1.3fr .95fr; align-items:start;} }
+
+  .spec-table{display:grid; grid-template-columns:auto 1fr; gap:.4rem 1rem; font-family:var(--font-mono); font-size:.82rem; margin:0;}
+  .spec-table div{display:contents;}
+  .spec-table dt{color:var(--ink-soft); text-transform:uppercase; letter-spacing:.03em; font-size:.68rem; align-self:start; padding-top:.2rem;}
+  .spec-table dd{margin:0; font-weight:500;}
+
+  .buy-box{display:flex; flex-direction:column; gap:.5rem; padding-top:1.1rem; border-top:1px dashed var(--rule);}
+  @media(min-width:720px){ .buy-box{padding-top:0; padding-left:1.4rem; border-top:none; border-left:1px dashed var(--rule);} }
+  .price-label{font-family:var(--font-mono); font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft);}
+  .price{font-family:var(--font-mono); font-weight:700; font-size:1.6rem; line-height:1.1;}
+  .price-note{font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft);}
+  .buy-btn{
+    position:relative;
+    display:inline-flex; align-items:center; gap:.45rem; width:fit-content;
+    background:var(--teal); color:#fff; text-decoration:none;
+    font-family:var(--font-mono); font-weight:700; font-size:.76rem; letter-spacing:.05em; text-transform:uppercase;
+    padding:.7rem 1.1rem .7rem 1.3rem;
+    border-radius:3px; margin-top:.35rem;
+    border-left:2px dashed rgba(255,255,255,.55);
+  }
+  .buy-btn:hover{background:var(--teal-deep);}
+
+  /* Footer */
+  .colophon{border-top:3px double var(--ink); padding-top:1.5rem; margin-top:1rem;}
+  .disclosure, .accuracy-note{font-size:.82rem; line-height:1.6; color:var(--ink-soft); max-width:66ch; margin:0 0 .85rem;}
+  .disclosure strong{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>Manifest No. 2026-07</span>
+      <span>Region: IN</span>
+    </div>
+    <h1 class="wordmark">The Drop Log</h1>
+    <p class="tagline">Six gadgets that landed in India this July — specced, priced, and ready to add to cart.</p>
+    <div class="meta-bar">
+      <span>Window <strong>Jul 2026</strong></span>
+      <span>Entries <strong>07</strong></span>
+      <span>Updated <strong>24 Jul 2026</strong></span>
+    </div>
+  </header>
+
+  <p class="intro">July's launches are landing under an unusual cloud: an industry-wide memory chip shortage that's pushed prices up across the board — even Samsung's new Z Fold8 Ultra arrived roughly ₹43,000 pricier than last year's equivalent. Seven devices worth knowing about made it out the door this month — Samsung's first-ever Ultra foldable, a fresh budget phone from Nothing, a camera-first mid-ranger from Oppo, Motorola's flagship flip, a new Xiaomi watch, an AI-ready laptop from Asus, and Bose-tuned earbuds from Skullcandy. <strong>Prices and India availability were still settling for two entries at publish time</strong> — flagged below.</p>
+
+  <nav class="index" aria-label="Jump to an entry">
+    <h2>In this drop</h2>
+    <ol>
+      <li><a href="#galaxy-z-fold8-ultra"><span class="idx-num">01</span><span class="idx-name">Samsung Galaxy Z Fold8 Ultra</span><span class="idx-leader"></span><span class="idx-price">₹1,99,999</span></a></li>
+      <li><a href="#nothing-phone-4b"><span class="idx-num">02</span><span class="idx-name">Nothing Phone (4b)</span><span class="idx-leader"></span><span class="idx-price">₹34,999</span></a></li>
+      <li><a href="#oppo-reno-16"><span class="idx-num">03</span><span class="idx-name">Oppo Reno 16 5G</span><span class="idx-leader"></span><span class="idx-price">₹61,999</span></a></li>
+      <li><a href="#razr-70-ultra"><span class="idx-num">04</span><span class="idx-name">Motorola Razr 70 Ultra</span><span class="idx-leader"></span><span class="idx-price">TBA</span></a></li>
+      <li><a href="#xiaomi-watch-s5"><span class="idx-num">05</span><span class="idx-name">Xiaomi Watch S5</span><span class="idx-leader"></span><span class="idx-price">TBA</span></a></li>
+      <li><a href="#asus-vivobook-15"><span class="idx-num">06</span><span class="idx-name">Asus Vivobook 15 (2026)</span><span class="idx-leader"></span><span class="idx-price">₹75,990</span></a></li>
+      <li><a href="#skullcandy-method-360"><span class="idx-num">07</span><span class="idx-name">Skullcandy Method 360 ANC</span><span class="idx-leader"></span><span class="idx-price">₹12,499</span></a></li>
+    </ol>
+  </nav>
+
+  <main class="entries">
+
+    <article class="entry" id="galaxy-z-fold8-ultra">
+      <div class="entry-head">
+        <span class="stamp stamp--preorder">Pre-order</span>
+        <span class="entry-date">Launched 22 Jul 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="3" width="12" height="8" rx="1.5"/><rect x="6" y="13" width="12" height="8" rx="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke-dasharray="2 2"/></svg>
+          Foldable — ultra flagship
+        </span>
+      </div>
+      <h2 class="entry-name">Samsung Galaxy Z Fold8 Ultra</h2>
+      <p class="entry-blurb">Samsung's Unpacked event in London just introduced a genuinely new tier — the Z Fold8 Ultra is the first-ever "Ultra" branded foldable, sitting above a redesigned, wider standard Z Fold8 built more for media viewing. At 215g and 0.41cm folded thin, it's the lightest Fold Samsung has built, though the same chip shortage squeezing the rest of this list pushed pricing up by roughly ₹43,000 over last year's equivalent. Pre-orders are open now in India, shipping from 8 August.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Chip</dt><dd>Snapdragon 8 Elite Gen 5 for Galaxy</dd></div>
+          <div><dt>Displays</dt><dd>~6.5" cover · 8" inner, 120Hz</dd></div>
+          <div><dt>Battery</dt><dd>5,000mAh</dd></div>
+          <div><dt>Rear camera</dt><dd>200MP + 50MP + 10MP</dd></div>
+          <div><dt>Build</dt><dd>0.41cm unfolded · 215g</dd></div>
+          <div><dt>Colours</dt><dd>Graphite · Cream · Violet Shadow · Green Shadow</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Starts at</span>
+          <span class="price">₹1,99,999</span>
+          <span class="price-note">12GB / 256GB · ships 8 Aug</span>
+          <a class="buy-btn" href="https://www.amazon.in/s?k=Samsung+Galaxy+Z+Fold8+Ultra&tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Samsung Galaxy Z Fold8 Ultra on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="nothing-phone-4b">
+      <div class="entry-head">
+        <span class="stamp stamp--sale">On sale</span>
+        <span class="entry-date">Launched 07 Jul 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>
+          Smartphone — mid-range
+        </span>
+      </div>
+      <h2 class="entry-name">Nothing Phone (4b)</h2>
+      <p class="entry-blurb">Nothing's first "b" series phone slots in below the Phone (4a), giving the brand a fresh entry point after this year's memory-chip-driven price hikes pushed the 4a past ₹39,000. It keeps the transparent design and Glyph Bar, but pairs a Snapdragon 6 Gen 4 with a bigger 6,000mAh battery built specifically for the Indian market.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Chip</dt><dd>Snapdragon 6 Gen 4</dd></div>
+          <div><dt>Display</dt><dd>6.77" FHD+ AMOLED · 120Hz</dd></div>
+          <div><dt>Battery</dt><dd>6,000mAh · 33W wired</dd></div>
+          <div><dt>Rear camera</dt><dd>50MP OIS + 8MP ultrawide</dd></div>
+          <div><dt>Front camera</dt><dd>16MP</dd></div>
+          <div><dt>Colours</dt><dd>Black · Blue · White</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Starts at</span>
+          <span class="price">₹34,999</span>
+          <span class="price-note">8GB / 128GB variant</span>
+          <a class="buy-btn" href="https://www.amazon.in/s?k=Nothing+Phone+4b&tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Nothing Phone 4b on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="oppo-reno-16">
+      <div class="entry-head">
+        <span class="stamp stamp--sale">On sale</span>
+        <span class="entry-date">Launched 02 Jul 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>
+          Smartphone — premium mid-range
+        </span>
+      </div>
+      <h2 class="entry-name">Oppo Reno 16 5G</h2>
+      <p class="entry-blurb">Oppo's compact flagship-lite pairs a 6.32-inch AMOLED panel that hits up to 3,600 nits outdoors with India's first HoloVerse 3D-textured back panel. A 6,700mAh cell and 80W SuperVOOC charging mean it can realistically stretch across two days, backed by IP66/IP68/IP69K water and dust resistance that's unusual at this price.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Chip</dt><dd>Snapdragon 7 Gen 4</dd></div>
+          <div><dt>Display</dt><dd>6.32" AMOLED · 120Hz · 3,600 nits</dd></div>
+          <div><dt>Battery</dt><dd>6,700mAh · 80W wired</dd></div>
+          <div><dt>Rear camera</dt><dd>50MP triple array</dd></div>
+          <div><dt>Durability</dt><dd>IP66 / IP68 / IP69K</dd></div>
+          <div><dt>Also comes in</dt><dd>12GB/256GB — ₹67,999</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Starts at</span>
+          <span class="price">₹61,999</span>
+          <span class="price-note">8GB / 256GB variant</span>
+          <a class="buy-btn" href="https://www.amazon.in/Telephoto-Collage-Snapdragon-6700mAh-SUPERVOOC/dp/B0H5C6QSJB?tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Oppo Reno 16 5G on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="razr-70-ultra">
+      <div class="entry-head">
+        <span class="stamp stamp--tba">Price TBA (IN)</span>
+        <span class="entry-date">Global 29 Apr 2026 · India rolling out</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="3" width="12" height="8" rx="1.5"/><rect x="6" y="13" width="12" height="8" rx="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke-dasharray="2 2"/></svg>
+          Foldable — flagship
+        </span>
+      </div>
+      <h2 class="entry-name">Motorola Razr 70 Ultra</h2>
+      <p class="entry-blurb">Motorola is bringing its flagship flip phone to India with what it calls the largest cover screen on any flip phone yet — a display built for actually replying to messages instead of just glancing at them. Snapdragon 8 Elite power and a 165Hz LTPO foldable panel put it squarely against Samsung's Z Flip 7, though Motorola hasn't locked in an official India price at the time of writing.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Chip</dt><dd>Snapdragon 8 Elite</dd></div>
+          <div><dt>Main display</dt><dd>7" LTPO AMOLED · 165Hz</dd></div>
+          <div><dt>Cover display</dt><dd>~4" · 165Hz</dd></div>
+          <div><dt>Battery</dt><dd>5,000mAh · 68W wired / 30W wireless</dd></div>
+          <div><dt>Rear camera</dt><dd>Dual 50MP</dd></div>
+          <div><dt>Front camera</dt><dd>50MP</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Global price</span>
+          <span class="price">$1,499</span>
+          <span class="price-note">India price expected on listing · check live</span>
+          <a class="buy-btn" href="https://www.amazon.in/s?k=Motorola+Razr+70+Ultra&tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Motorola Razr 70 Ultra on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="xiaomi-watch-s5">
+      <div class="entry-head">
+        <span class="stamp stamp--tba">Price TBA (IN)</span>
+        <span class="entry-date">Global 28 May 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="2"/><line x1="10" y1="3" x2="10" y2="7"/><line x1="14" y1="3" x2="14" y2="7"/><line x1="10" y1="17" x2="10" y2="21"/><line x1="14" y1="17" x2="14" y2="21"/><line x1="17" y1="10" x2="19" y2="10"/></svg>
+          Smartwatch
+        </span>
+      </div>
+      <h2 class="entry-name">Xiaomi Watch S5 (46mm)</h2>
+      <p class="entry-blurb">Xiaomi's newest flagship watch swaps in a bezel that's 40% narrower than its predecessor, wrapped around a 1.48-inch AMOLED display bright enough to read outdoors at 2,500 nits. A four-sensor heart-rate array, NFC payments, and HyperOS 3 round out a watch aimed at buyers cross-shopping the Galaxy Watch and Watch GT lines.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Display</dt><dd>1.48" AMOLED · 480×480 · 2,500 nits</dd></div>
+          <div><dt>Build</dt><dd>46×46×11mm · steel/ceramic/carbon bezel</dd></div>
+          <div><dt>Battery</dt><dd>815mAh</dd></div>
+          <div><dt>Health</dt><dd>HR · SpO2 · stress · sleep</dd></div>
+          <div><dt>Water resistance</dt><dd>5ATM</dd></div>
+          <div><dt>Extras</dt><dd>NFC payments · HyperOS 3</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Est. price</span>
+          <span class="price">~₹13,999</span>
+          <span class="price-note">Early estimate · confirm on listing</span>
+          <a class="buy-btn" href="https://www.amazon.in/s?k=Xiaomi+Watch+S5&tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Xiaomi Watch S5 on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="asus-vivobook-15">
+      <div class="entry-head">
+        <span class="stamp stamp--sale">On sale</span>
+        <span class="entry-date">Launched Jul 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="4" width="12" height="9" rx="1"/><path d="M3 19h18l-2-3H5l-2 3z"/></svg>
+          Laptop — everyday AI PC
+        </span>
+      </div>
+      <h2 class="entry-name">Asus Vivobook 15 (2026)</h2>
+      <p class="entry-blurb">Asus is calling this the first laptop in India built on Intel's new Core Series 3 chips, pairing up to a Core 7 350 with a 17 TOPS NPU for on-device AI tasks like background blur on video calls. It's aimed squarely at students and everyday office use, with a lifetime Office Home 2024 licence and 100GB of OneDrive thrown in for the first year.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Chip</dt><dd>Intel Core Series 3 (up to Core 7 350)</dd></div>
+          <div><dt>NPU</dt><dd>Up to 17 TOPS</dd></div>
+          <div><dt>Display</dt><dd>15.6" FHD IPS · 250 nits</dd></div>
+          <div><dt>Memory</dt><dd>Up to 16GB DDR5</dd></div>
+          <div><dt>Storage</dt><dd>512GB PCIe 4.0 SSD</dd></div>
+          <div><dt>Weight</dt><dd>1.7kg</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Starts at</span>
+          <span class="price">₹75,990</span>
+          <span class="price-note">Base configuration</span>
+          <a class="buy-btn" href="https://www.amazon.in/ASUS-Vivobook-i3-14th-Windows-X1504VAP-BQ1321WS/dp/B09BB8DQKN?tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Asus Vivobook 15 2026 on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" id="skullcandy-method-360">
+      <div class="entry-head">
+        <span class="stamp stamp--sale">On sale</span>
+        <span class="entry-date">Launched Jul 2026</span>
+        <span class="entry-cat">
+          <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="8" r="2.6"/><path d="M7 10.6v3.4a2.4 2.4 0 0 0 2.4 2.4h.2"/><circle cx="17" cy="8" r="2.6"/><path d="M17 10.6v3.4a2.4 2.4 0 0 1-2.4 2.4h-.2"/></svg>
+          Earbuds — ANC
+        </span>
+      </div>
+      <h2 class="entry-name">Skullcandy Method 360 ANC</h2>
+      <p class="entry-blurb">Skullcandy handed the sound tuning on its newest earbuds to Bose — its first collaboration of this kind — and paired it with 4-mic hybrid ANC and a battery rated for 40 hours off a single case charge. At an introductory ₹12,499 against a ₹16,999 MRP, they're positioned as a value alternative to pricier ANC buds from Samsung and Sony.</p>
+      <div class="entry-body">
+        <dl class="spec-table">
+          <div><dt>Sound</dt><dd>Bose-tuned · 12mm drivers</dd></div>
+          <div><dt>ANC</dt><dd>4-mic hybrid + Stay-Aware mode</dd></div>
+          <div><dt>Battery</dt><dd>40hrs (ANC off) / 32hrs (ANC on)</dd></div>
+          <div><dt>Quick charge</dt><dd>10 min = 2 hrs playback</dd></div>
+          <div><dt>Connectivity</dt><dd>Bluetooth 5.3 · multipoint</dd></div>
+          <div><dt>Colours</dt><dd>Black · Bone · Primer · Plasma · Leopard</dd></div>
+        </dl>
+        <div class="buy-box">
+          <span class="price-label">Intro price</span>
+          <span class="price">₹12,499</span>
+          <span class="price-note">MRP ₹16,999</span>
+          <a class="buy-btn" href="https://www.amazon.in/s?k=Skullcandy+Method+360+ANC&tag=raredeals013-21" target="_blank" rel="nofollow sponsored noopener" aria-label="View Skullcandy Method 360 ANC on Amazon">View on Amazon →</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="colophon">
+    <p class="disclosure"><strong>Affiliate disclosure —</strong> The Drop Log participates in the Amazon Associates programme. Links marked "View on Amazon" may earn a small commission on qualifying purchases, at no extra cost to you.</p>
+    <p class="accuracy-note">Specs and prices are compiled from official brand and retailer listings as of 24 Jul 2026. India pricing for the Razr 70 Ultra and Watch S5 was still rolling out at publish time, and the Z Fold8 Ultra is on pre-order with shipping from 8 Aug — confirm the final price and stock on Amazon before buying.</p>
+  </footer>
+
+</div>
+</body>
+</html>
